@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-# This is main python file for Facebook Likes monitor project. there is not other file required.
-# This file Send  Likes and  Grove sensors  data (Temperature, Light ) periodically to AWS IoT.
-# This  file has 3 main functions 
+# This is main python file for Facebook Likes monitor project. there is not other file required
+# A)  Updated by chandra sekar / chandra@fastmail.net
+# B)  This file Send  Likes and  Grove sensors  data (Temperature, Light ) periodically to AWS IoT  
+# C)  This  file has 3 main functions 
 #  1. Getting Likes from particualr page  
 #  2. Updating the browser 
 #  3. Uploading the sensor data + Likes to AWS IoT/Sumologic /Slack
-# Thurday afternoon_final chaned to version 10
-# Updated by chandra sekar / chandra@fastmail.net 
-
 
 import time
 import datetime
