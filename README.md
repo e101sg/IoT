@@ -1,3 +1,3 @@
 # IoT
 
-This is code file for IoT project.
+This is readme  file for IoT project - Facebook Likes monitor.
