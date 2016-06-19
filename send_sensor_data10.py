@@ -6,6 +6,7 @@
 #  1. Getting Likes from particualr page  
 #  2. Updating the browser 
 #  3. Uploading the sensor data + Likes to AWS IoT/Sumologic /Slack
+#  Facebook Graph explorer API used with page id / access token 
 
 import time
 import datetime
