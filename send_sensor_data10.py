@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Refresh is working now it move to version 7
-# Send Grove sensor data periodically to AWS IoT.
-# Thurday afternoon_final
-#
+# This is main python file for Facebook Likes monitor project. there is not other file required.
+# This file Send  Likes and  Grove sensors  data (Temperature, Light ) periodically to AWS IoT.
+# Thurday afternoon_final chaned to version 10
+# Updated by chandra sekar / chandra@fastmail.net 
 import time
 import datetime
 import ssl
@@ -13,10 +13,7 @@ from selenium import webdriver
 import selenium
 import json
 import webbrowser
-bool (True)
-#import threading
-####import schedule
-#import sched, time
+
 
 
 try:
@@ -55,7 +52,7 @@ time.sleep(5)
 buzzer = 8
 grovepi.pinMode(buzzer,"OUTPUT")
 temp_sensor = 1
-
+# Function to get  Likes from FACEBOOK page 
 def get_page_data(page_id, access_token):  ##  Moved this
     global Like  ##  Added this
     # Add a random suffix to prevent caching
@@ -88,18 +85,13 @@ token = "EAACEdEose0cBAIKUquFylMqRe2KcQxBrbjP53yFErfqYXOV4kwWxFhDAp51xyGYwvVpjtk
 
 #page_data = get_page_data(page_id, token)
 #page_data = get_page_data(page_id, access_token)
-
-
 # print ("Page Name:")+str(page_data['name'])
 #print("Likes:" + str(page_data['likes']))
-
 
 driver = webdriver.Firefox()
 driver.get("https://www.facebook.com/plugins/fan.php?connections=100&id=783256781810074")
 driver.refresh()
 
-
-#webbrowser.open('https://www.facebook.com/plugins/fan.php?connections=100&id=783256781810074')
 
 # This is the main logic of the program.  We connect to AWS IoT via MQTT, send sensor data periodically to AWS IoT,
 # and handle any actuation commands received from AWS IoT.
